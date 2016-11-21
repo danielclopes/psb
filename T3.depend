@@ -1,0 +1,32 @@
+# depslib dependency file v1.0
+1479672515 source:/home/daniel/T3/main.cpp
+	<iostream>
+	"Jogador.h"
+	"JogadorLivre.h"
+	"JogadorContrato.h"
+
+1479684743 source:/home/daniel/T3/src/Jogador.cpp
+	"Jogador.h"
+
+1479580888 /home/daniel/T3/include/Jogador.h
+	<string>
+	<iostream>
+
+1479580846 source:/home/daniel/T3/src/JogadorLivre.cpp
+	"JogadorLivre.h"
+
+1479580888 /home/daniel/T3/include/JogadorLivre.h
+	"Jogador.h"
+
+1479686405 source:/home/daniel/T3/src/JogadorContrato.cpp
+	"JogadorContrato.h"
+
+1479581683 /home/daniel/T3/include/JogadorContrato.h
+	"Jogador.h"
+
+1479684680 source:/home/daniel/T3/src/Clube.cpp
+	"Clube.h"
+
+1479684463 /home/daniel/T3/include/Clube.h
+	"JogadorContrato.h"
+
