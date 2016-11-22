@@ -8,6 +8,7 @@
 #include <fstream>
 #include <sstream>
 #include <string>
+#include <cstdlib>
 #include "Clube.h"
 #include "JogadorLivre.h"
 #include "JogadorContrato.h"
@@ -40,45 +41,14 @@ void conta_jog_clb()
             }
             else
             {
-                qntJ++;
+                if (aux.compare("") != 0)
+                    qntJ++;
             }
-
         }
     }
     while(!bd_rd.eof());
     bd_rd.close();
 }
-
-/*void carrega_bd()
-{
-    bd_rd.open("BD.txt");
-    string aux = "";
-    string nm_j = "";
-    string nm_c = "";
-    int cod = 0;
-    int cl = 0;
-    int jg = 0;
-    do
-    {
-        if(!bd_rd.eof())
-        {
-            aux = "";
-            getline(bd_rd,aux);
-            if (!isdigit(aux[0]))
-            {
-                nm_c = aux;
-                j[cl] = new Clube(nm_c);
-            }
-            else
-            {
-                qntJ++;
-            }
-
-        }
-    }
-    while(!bd_rd.eof());
-    bd_rd.close();
-}*/
 
 void submenu()
 {
@@ -176,41 +146,66 @@ int main()
     string aux = "";
     string nm_j = "";
     string nm_c = "";
+    string cd = "";
     int cod_j = 0;
     int cl = 0;
     int jg = 0;
+
     do
     {
         if(!bd_rd.eof())
         {
             aux = "";
             getline(bd_rd,aux);
-            if (!isdigit(aux[0]) && aux.compare("SIAPERGS") != 0)
+            if (!isdigit(aux[0]) && aux.compare("SIAPERGS") != 0 && aux.compare("") != 0)
             {
                 nm_c = aux;
+
+                //cout << "C: " << nm_c << endl;
                 c[cl] = new Clube(aux);
-                //cout << c[cl]->getNome() << endl;
+                //cout << cl << " - " << c[cl]->getNome() << endl;
                 cl++;
+            }
+            else if(aux.compare("SIAPERGS") == 0)
+            {
+                Clube SIAPERGS;
+                while(!bd_rd.eof())
+                {
+                    getline(bd_rd,aux);
+                    //SIAPERGS.ContratarJogador();
+                }
             }
             else
             {
-                //getline(bd_rd,aux);
-                bd_rd >> cod_j;
-                bd_rd >> nm_j;
+                if(aux.compare("") != 0 && aux.compare("SIAPERGS") != 0)
+                {
+                    cd = aux.substr(0,6);
+                    cod_j = atoi(cd.c_str());
 
-                c[cl-1]->ContratarJogador(new JogadorContrato(nm_j, cod_j, nm_c));
-                cout << "Clube: " << c[cl-1]->getNome() << "\tQtd Jog: " << c[cl-1]->getQntJogador() << endl;
-                cout << cod_j << " - " << nm_j << endl;
-                //getline(bd_rd,aux);
+                    nm_j = aux.substr(7,aux.length()-1);
 
+                    //cout << "Código: " << cod_j << "\tNome: " << nm_j << endl;
+
+
+                    c[cl-1]->ContratarJogador(new JogadorContrato(nm_j, cod_j, nm_c));
+                    //cout << "Clube: " << c[cl-1]->getNome() << "\tQtd Jog: " << c[cl-1]->getQntJogador() << endl;
+                    //cout << cod_j << " - " << nm_j << endl;
+                }
 
             }
         }
     }
     while(!bd_rd.eof());
+
+    for(int j = 0; j < qntC; j++)
+    {
+        cout << "Clube: " << c[j]->getNome() << "\tQtd Jog: " << c[j]->getQntJogador() << endl;
+    }
+
     bd_rd.close();
 
-    cout << "\tSisReJ - Sistema de Registro de Jogadores\n" << endl;
+
+    cout << "\n\tSisReJ - Sistema de Registro de Jogadores\n" << endl;
 
 //menu();
     do

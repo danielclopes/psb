@@ -30,10 +30,12 @@
 1479684463 /home/daniel/T3/include/Clube.h
 	"JogadorContrato.h"
 
-1479740663 source:/home/daniel/Pessoal/PUCRS/PSB/T3/main.cpp
+1479826284 source:/home/daniel/Pessoal/PUCRS/PSB/T3/main.cpp
 	<iostream>
 	<fstream>
 	<sstream>
+	<string>
+	<cstdlib>
 	"Clube.h"
 	"JogadorLivre.h"
 	"JogadorContrato.h"
@@ -48,10 +50,10 @@
 1479665548 /home/daniel/Pessoal/PUCRS/PSB/T3/include/JogadorContrato.h
 	"Jogador.h"
 
-1479665552 source:/home/daniel/Pessoal/PUCRS/PSB/T3/src/Clube.cpp
+1479811269 source:/home/daniel/Pessoal/PUCRS/PSB/T3/src/Clube.cpp
 	"Clube.h"
 
-1479665548 /home/daniel/Pessoal/PUCRS/PSB/T3/include/Clube.h
+1479811269 /home/daniel/Pessoal/PUCRS/PSB/T3/include/Clube.h
 	"JogadorContrato.h"
 
 1479665548 source:/home/daniel/Pessoal/PUCRS/PSB/T3/src/Jogador.cpp
