@@ -10,6 +10,7 @@ private:
     int qntJogadores;
     Jogador	*j[MAX_JOGADOR];
 public:
+    Clube();
     Clube(string n);
     ~Clube();
     void ContratarJogador(Jogador *jc);

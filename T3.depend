@@ -63,3 +63,36 @@
 1479665552 source:/home/daniel/Pessoal/PUCRS/PSB/T3/src/JogadorLivre.cpp
 	"JogadorLivre.h"
 
+1479770426 source:/home/daniel/PUCRS/2016-2/PSB/main.cpp
+	<iostream>
+	<fstream>
+	<sstream>
+	"Clube.h"
+	"JogadorLivre.h"
+	"JogadorContrato.h"
+
+1479763153 /home/daniel/PUCRS/2016-2/PSB/include/Clube.h
+	"JogadorContrato.h"
+
+1479757470 /home/daniel/PUCRS/2016-2/PSB/include/JogadorContrato.h
+	"Jogador.h"
+
+1479757470 /home/daniel/PUCRS/2016-2/PSB/include/Jogador.h
+	<string>
+	<iostream>
+
+1479757470 /home/daniel/PUCRS/2016-2/PSB/include/JogadorLivre.h
+	"Jogador.h"
+
+1479768006 source:/home/daniel/PUCRS/2016-2/PSB/src/Clube.cpp
+	"Clube.h"
+
+1479757470 source:/home/daniel/PUCRS/2016-2/PSB/src/Jogador.cpp
+	"Jogador.h"
+
+1479757470 source:/home/daniel/PUCRS/2016-2/PSB/src/JogadorContrato.cpp
+	"JogadorContrato.h"
+
+1479757470 source:/home/daniel/PUCRS/2016-2/PSB/src/JogadorLivre.cpp
+	"JogadorLivre.h"
+
